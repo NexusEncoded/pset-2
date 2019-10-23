@@ -9,4 +9,4 @@ let mathFinal = (mathMid* 2.54);
 mathFinal = Math.round(mathFinal*100)/100;
 let f = mathFinal.toLocaleString();
 
-console.log("A(n) " + w + "-by-"+l+"-inch sheet of paper has a perimeter of " + f +" centimeter(s).");
+console.log("\nA(n) " + w + "-by-"+l+"-inch sheet of paper has a perimeter of " + f +" centimeter(s).");
