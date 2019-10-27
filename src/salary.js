@@ -1,21 +1,20 @@
 const readlineSync = require("readline-sync");
 
-const four = 0.07;
+const salary = Number(readlineSync.question("\nAnnual salary: "));
+
+const pre = 0.07;
 const federal = 0.157;
-const state = 0.047;
+const state = 0.0447;
 const social = 0.062;
-const medi = 0.145;
+const medi = 0.0145;
+const payperiod = 24;
 
 
-const salary = Number(readlineSync.question("Annual salary: "));
+const totaltax = federal + state + social + medi;
+let firstduc = (1-pre) * salary;
+let secduc = (1-totaltax) * firstduc;
+let totalpay = secduc/24;
+let check = totalpay.toLocaleString('en-US', {style : 'currency' , currency: 'USD'});
 
-let gone1 = (1-four)*salary;
-let gone2 = (1-federal)*gone1;
-let gone3 = (1-state)*gone2;
-let gone4 = (1-social)*gone3;
-let gone5 = (1-medi)*gone4;
-let take = gone5;
 
-let check = take.toLocaleString('en-US', {style : 'currency', currency : 'USD'});
-
-console.log("\n Your take-home pay check will be " + check);
+console.log("\n Your take-home pay check will be " +  check + ".");
