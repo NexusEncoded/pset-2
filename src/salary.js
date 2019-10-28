@@ -17,4 +17,4 @@ let totalpay = secduc/24;
 let check = totalpay.toLocaleString('en-US', {style : 'currency' , currency: 'USD'});
 
 
-console.log("\n Your take-home pay check will be " +  check + ".");
+console.log("\n Your take-home pay each check will be " +  check + ".");
